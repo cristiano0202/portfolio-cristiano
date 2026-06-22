@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+    background: linear-gradient(135deg, #0d47a1, #1976d2);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.foto-perfil {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+
+/* MENU */
+
+nav {
+    background: #1565c0;
+    text-align: center;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffeb3b;
+}
+
+/* SEÇÕES */
+
+section {
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    color: #0d47a1;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #1976d2;
+    padding-bottom: 8px;
+}
+
+/* CARDS */
+
+.card {
+    background: #f8f9fa;
+    padding: 15px;
+    margin-top: 15px;
+    border-left: 5px solid #1976d2;
+    border-radius: 8px;
+}
+
+.card h3 {
+    color: #0d47a1;
+    margin-bottom: 8px;
+}
+
+/* LISTAS */
+
+ul {
+    padding-left: 25px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* CONTATO */
+
+#contato p {
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+}
+
+/* RODAPÉ */
+
+footer {
+    background: #0d47a1;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .foto-perfil {
+        width: 140px;
+        height: 140px;
+    }
+
+    section {
+        margin: 15px;
+    }
+}
+.miniatura {
+    width: 220px;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 2px solid #ddd;
+}
+
+.miniatura:hover {
+    transform: scale(1.05);
+}
+
+/* Modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-conteudo {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
