@@ -15,8 +15,6 @@ body {
     line-height: 1.6;
 }
 
-/* HEADER */
-
 header {
     background: linear-gradient(135deg, #0d47a1, #1976d2);
     color: white;
@@ -42,8 +40,6 @@ header p {
     font-size: 1.1rem;
 }
 
-/* MENU */
-
 nav {
     background: #1565c0;
     text-align: center;
@@ -53,20 +49,23 @@ nav {
     z-index: 1000;
 }
 
-nav a {
+nav a,
+nav button {
     display: inline-block;
     color: white;
     text-decoration: none;
     margin: 8px 15px;
     font-weight: bold;
-    transition: color 0.3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
-nav a:hover {
+nav a:hover,
+nav button:hover {
     color: #ffeb3b;
 }
-
-/* SEÇÕES */
 
 section {
     width: 90%;
@@ -84,8 +83,6 @@ section h2 {
     border-bottom: 3px solid #1976d2;
     padding-bottom: 8px;
 }
-
-/* CARDS */
 
 .card {
     background: #f8f9fa;
@@ -106,17 +103,104 @@ section h2 {
     margin-bottom: 8px;
 }
 
-/* LISTAS */
-
-ul {
-    padding-left: 25px;
-}
-
-ul li {
+#contato p {
     margin-bottom: 10px;
+    font-size: 1.05rem;
 }
 
-/* MINIATURAS */
+footer {
+    background: #0d47a1;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
 
-.miniatura {
-    width: 
+.login-box {
+    max-width: 420px;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #0d47a1;
+}
+
+.campo input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.btn {
+    background: #1976d2;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background: #0d47a1;
+}
+
+#btnSair {
+    background: transparent;
+}
+
+.mensagem-erro {
+    color: #c62828;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.mensagem-sucesso {
+    color: #2e7d32;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.usuario-teste {
+    margin-top: 15px;
+}
+
+.oculto {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 30px 15px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav a,
+    nav button {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .foto-perfil {
+        width: 140px;
+        height: 140px;
+    }
+
+    section {
+        width: auto;
+        margin: 15px;
+        padding: 18px;
+    }
+}
