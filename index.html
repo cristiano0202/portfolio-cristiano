@@ -1,71 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio-cristiano</title>
-    <link rel="stylesheet" href="style.css">
-
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <link rel="stylesheet" href="estilo.css">
 </head>
-
-<script>
-    document.addEventListener("keydown", function (e) {
-
-        if (e.key === "F12") {
-            e.preventDefault();
-        }
-
-        if (e.ctrlKey && e.shiftKey && e.key === "I") {
-            e.preventDefault();
-        }
-
-        if (e.ctrlKey && e.shiftKey && e.key === "J") {
-            e.preventDefault();
-        }
-
-        if (e.ctrlKey && e.key === "U") {
-            e.preventDefault();
-        }
-
-    });
-</script>
-
-<script>
-    document.addEventListener("contextmenu", function (e) {
-        e.preventDefault();
-    });
-</script>
-
-<script>
-    document.querySelectorAll("img").forEach(img => {
-        img.setAttribute("draggable", "false");
-    });
-</script>
-
-<script>
-    function abrirImagem(src) {
-        document.getElementById("modalImagem").style.display = "flex";
-        document.getElementById("imagemGrande").src = src;
-    }
-
-    function fecharImagem() {
-        document.getElementById("modalImagem").style.display = "none";
-    }
-</script>
 
 <body>
     <header>
         <img src="jpeg/cristiano.png" alt="Foto de Cristiano" class="foto-perfil" draggable="false">
         <h1>Cristiano de Jesus Batista</h1>
-
         <p>Técnico em Eletrotécnica | Eletricista</p>
-
-            
-        </div>
     </header>
 
     <nav>
@@ -81,17 +27,16 @@
         <h2>Sobre Mim</h2>
 
         <p>
-            Meu nome é Cristiano de Jesus Batista, e resido em
-            Araxá - MG. Sou Técnico em Eletrotécnica com experiência em
-            manutenção industrial, instalações elétricas, montagem e desmontagem
-            de painéis elétricos e manutenção de motores.
+            Meu nome é Cristiano de Jesus Batista, e resido em Araxá - MG.
+            Sou Técnico em Eletrotécnica com experiência em manutenção industrial,
+            instalações elétricas, montagem e desmontagem de painéis elétricos
+            e manutenção de motores.
         </p>
 
         <p>
-            Atualmente atuo como Eletricista Industrial na Mosaic Company e
-            também estou cursando Engenharia de Software pela Uniube,
-            buscando ampliar meus conhecimentos em tecnologia, automação
-            industrial e desenvolvimento de sistemas.
+            Atualmente atuo como Eletricista Industrial na Mosaic Company e também
+            estou cursando Engenharia de Software pela Uniube, buscando ampliar meus
+            conhecimentos em tecnologia, automação industrial e desenvolvimento de sistemas.
         </p>
     </section>
 
@@ -115,14 +60,13 @@
         <div class="card">
             <h3>Técnico em Eletrotécnica</h3>
             <p>SENAI CFP Djalma Guimarães - Araxá</p>
-            <p>mai de 2023 – ago de 2024</p>
+            <p>maio de 2023 - agosto de 2024</p>
         </div>
 
         <div class="card">
             <h3>Técnico em Informática</h3>
             <p>BIT Araxá - Educação Profissional</p>
-            <p>2024-2026</p>
-            </p>
+            <p>2024 - 2026</p>
         </div>
     </section>
 
@@ -133,16 +77,14 @@
             <h3>Técnico em Eletrotécnica</h3>
             <p><strong>Instituição:</strong> SENAI CFP Djalma Guimarães</p>
 
-            <img src="jpeg/TÉCNICO EM ELETROTÉCNICA.jpeg" alt="Técnico em Eletrotécnica" class="miniatura" draggable="false" onclick="abrirImagem(this.src)">
-
+            <img src="jpeg/tecnico-eletrotecnica.jpeg" alt="Técnico em Eletrotécnica" class="miniatura" draggable="false" onclick="abrirImagem(this.src)">
         </div>
 
         <div class="card">
             <h3>Técnico em Informática</h3>
             <p><strong>Instituição:</strong> BIT Araxá - Educação Profissional</p>
 
-            <img src="" alt=""class="miniatura"draggable="false"onclick="abrirImagem(this.src)">,
-
+            <img src="jpeg/tecnico-informatica.jpeg" alt="Técnico em Informática" class="miniatura" draggable="false" onclick="abrirImagem(this.src)">
         </div>
 
         <div class="card">
@@ -150,16 +92,15 @@
             <p><strong>Instituição:</strong> Udemy</p>
             <p><strong>Emissão:</strong> Julho de 2025</p>
 
-            <img src="jpeg/Instrumentação Industrial.png" alt="Instrumentação Industrial" class="miniatura" draggable="false" onclick="abrirImagem(this.src)">
-         
+            <img src="jpeg/instrumentacao-industrial.png" alt="Instrumentação Industrial" class="miniatura" draggable="false" onclick="abrirImagem(this.src)">
         </div>
 
         <div class="card">
-            <h3>O-PAS – O Padrão dos Padrões & Indústria 4.0 e Plataforma Integrada SYSTEM302</h3>
+            <h3>O-PAS - O Padrão dos Padrões & Indústria 4.0</h3>
             <p><strong>Instituição:</strong> CEFET-MG</p>
             <p><strong>Emissão:</strong> Novembro de 2023</p>
 
-           <img src="jpeg/O-PAS – O  Padrões & Indústria 4.0 .jpeg" alt="O-PAS Indústria 4.0" class="miniatura" draggable="false" onclick="abrirImagem(this.src)">
+            <img src="jpeg/opas-industria-4.jpeg" alt="O-PAS Indústria 4.0" class="miniatura" draggable="false" onclick="abrirImagem(this.src)">
         </div>
 
         <div class="card">
@@ -167,17 +108,14 @@
             <p><strong>Instituição:</strong> Consultoria DLP</p>
             <p><strong>Emissão:</strong> Março de 2024</p>
 
-            <img src="" alt="" 
-                class="miniatura" 
-                draggable="false"
-                onclick="abrirImagem(this.src)">,
+            <img src="jpeg/comandos-eletricos.jpeg" alt="Comandos Elétricos" class="miniatura" draggable="false" onclick="abrirImagem(this.src)">
         </div>
 
         <div class="card">
             <h3>CFW500</h3>
             <p><strong>Capacitação em Inversor de Frequência WEG CFW500</strong></p>
 
-           <img src="jpeg/CFW500.jpeg" alt="CFW500" class="miniatura" draggable="false" onclick="abrirImagem(this.src)">
+            <img src="jpeg/cfw500.jpeg" alt="CFW500" class="miniatura" draggable="false" onclick="abrirImagem(this.src)">
         </div>
 
         <div class="card">
@@ -210,19 +148,28 @@
     <section id="contato">
         <h2>Contato</h2>
 
-        <p>📱 WhatsApp: (34) 99050-4140</p>
-        <p>📧 Email: cristianojesus13579@gmail.com</p>
-        <p>📍 Araxá - Minas Gerais</p>
+        <p>WhatsApp: (34) 99050-4140</p>
+        <p>Email: cristianojesus13579@gmail.com</p>
+        <p>Araxá - Minas Gerais</p>
     </section>
 
     <div id="modalImagem" class="modal" onclick="fecharImagem()">
-        <img id="imagemGrande" class="modal-conteudo">
+        <img id="imagemGrande" class="modal-conteudo" alt="Imagem ampliada">
     </div>
 
+    <footer>
+        <p>© 2026 portfolio-cristiano</p>
+    </footer>
+
+    <script>
+        function abrirImagem(src) {
+            document.getElementById("modalImagem").style.display = "flex";
+            document.getElementById("imagemGrande").src = src;
+        }
+
+        function fecharImagem() {
+            document.getElementById("modalImagem").style.display = "none";
+        }
+    </script>
 </body>
-
-<footer>
-    © 2026 portfolio-cristiano
-</footer>
-
 </html>
