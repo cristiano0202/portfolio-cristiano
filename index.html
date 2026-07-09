@@ -1,126 +1,234 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Cristiano Eletricista</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Quem Sou Eu Além d</title>
+    <link rel="stylesheet" href="style.css">
+
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 </head>
 
+<script>
+    document.addEventListener("keydown", function (e) {
+
+        if (e.key === "F12") {
+            e.preventDefault();
+        }
+
+        if (e.ctrlKey && e.shiftKey && e.key === "I") {
+            e.preventDefault();
+        }
+
+        if (e.ctrlKey && e.shiftKey && e.key === "J") {
+            e.preventDefault();
+        }
+
+        if (e.ctrlKey && e.key === "U") {
+            e.preventDefault();
+        }
+
+    });
+</script>
+
+<script>
+    document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+    });
+</script>
+
+<script>
+    document.querySelectorAll("img").forEach(img => {
+        img.setAttribute("draggable", "false");
+    });
+</script>
+
+<script>
+    function abrirImagem(src) {
+        document.getElementById("modalImagem").style.display = "flex";
+        document.getElementById("imagemGrande").src = src;
+    }
+
+    function fecharImagem() {
+        document.getElementById("modalImagem").style.display = "none";
+    }
+</script>
+
 <body>
-    <header class="topo">
-        <img src="https://via.placeholder.com/180" alt="Foto de perfil de Cristiano Eletricista" class="foto-perfil">
-        <h1>Cristiano Eletricista</h1>
-        <p>Portfólio profissional e serviços elétricos residenciais e comerciais.</p>
+    <header>
+        <img src="cristiano.png" alt="Foto de Cristiano" class="foto-perfil">
+
+        <h1>Cristiano de Jesus Batista</h1>
+
+        <p>Técnico em Eletrotécnica | Eletricista</p>
+
+            
+        </div>
     </header>
 
-    <nav class="menu" aria-label="Navegação principal">
+    <nav>
         <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#projetos">Projetos</a>
+        <a href="#dados">Dados</a>
+        <a href="#formacao">Formação</a>
+        <a href="#certificados">Certificados</a>
+        <a href="#habilidades">Habilidades</a>
         <a href="#contato">Contato</a>
-        <a href="#login" id="linkLogin">Login</a>
-        <button type="button" id="btnSair" class="oculto">Sair</button>
     </nav>
 
-    <main>
-        <section id="sobre">
-            <h2>Sobre Mim</h2>
-            <p>Sou profissional da área elétrica, com experiência em instalações, manutenção e projetos residenciais e comerciais.</p>
-        </section>
+    <section id="sobre">
+        <h2>Sobre Mim</h2>
 
-        <section id="servicos">
-            <h2>Serviços</h2>
+        <p>
+            Meu nome é Cristiano de Jesus Batista, e resido em
+            Araxá - MG. Sou Técnico em Eletrotécnica com experiência em
+            manutenção industrial, instalações elétricas, montagem e desmontagem
+            de painéis elétricos e manutenção de motores.
+        </p>
 
-            <div class="grade-cards">
-                <article class="card">
-                    <h3>Instalações Elétricas</h3>
-                    <p>Execução de instalações elétricas residenciais e comerciais com segurança e organização.</p>
-                </article>
+        <p>
+            Atualmente atuo como Eletricista Industrial na Mosaic Company e
+            também estou cursando Engenharia de Software pela Uniube,
+            buscando ampliar meus conhecimentos em tecnologia, automação
+            industrial e desenvolvimento de sistemas.
+        </p>
+    </section>
 
-                <article class="card">
-                    <h3>Manutenção</h3>
-                    <p>Correção de falhas, troca de disjuntores, tomadas, interruptores e luminárias.</p>
-                </article>
+    <section id="dados">
+        <h2>Dados Profissionais</h2>
 
-                <article class="card">
-                    <h3>Quadros e Circuitos</h3>
-                    <p>Montagem, revisão e identificação de circuitos para facilitar a manutenção.</p>
-                </article>
-            </div>
-        </section>
+        <p><strong>Nome:</strong> Cristiano de Jesus Batista</p>
+        <p><strong>Cidade:</strong> Araxá - MG</p>
+        <p><strong>Área de atuação:</strong> Eletrotécnica e Automação Industrial</p>
+    </section>
 
-        <section id="projetos">
-            <h2>Projetos</h2>
+    <section id="formacao">
+        <h2>Formação Acadêmica</h2>
 
-            <div class="grade-cards">
-                <article class="card">
-                    <h3>Projeto Residencial</h3>
-                    <p>Instalação elétrica completa para residência, com pontos de iluminação, tomadas e proteção.</p>
-                </article>
+        <div class="card">
+            <h3>Engenharia de Software</h3>
+            <p>Uniube - Universidade de Uberaba</p>
+            <p>2026 - 2029</p>
+        </div>
 
-                <article class="card">
-                    <h3>Projeto Comercial</h3>
-                    <p>Organização de circuitos e pontos elétricos para comércio, loja ou escritório.</p>
-                </article>
-            </div>
-        </section>
+        <div class="card">
+            <h3>Técnico em Eletrotécnica</h3>
+            <p>SENAI CFP Djalma Guimarães - Araxá</p>
+            <p>mai de 2023 – ago de 2024</p>
+        </div>
 
-        <section id="login" class="login-box">
-            <h2>Login</h2>
-
-            <form id="formLogin">
-                <div class="campo">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" placeholder="Digite seu e-mail" autocomplete="email" required>
-                </div>
-
-                <div class="campo">
-                    <label for="senha">Senha</label>
-                    <input type="password" id="senha" placeholder="Digite sua senha" autocomplete="current-password" required>
-                </div>
-
-                <button type="submit" class="btn">Entrar</button>
-
-                <p id="mensagemLogin" role="status"></p>
-            </form>
-
-            <p class="usuario-teste">
-                Usuário teste: <strong>admin@email.com</strong><br>
-                Senha teste: <strong>123456</strong>
+        <div class="card">
+            <h3>Técnico em Informática</h3>
+            <p>BIT Araxá - Educação Profissional</p>
+            <p>2024-2026</p>
             </p>
-        </section>
+        </div>
+    </section>
 
-        <section id="areaRestrita" class="oculto">
-            <h2>Área Restrita</h2>
+    <section id="certificados">
+        <h2>Licenças e Certificações</h2>
 
-            <div class="grade-cards">
-                <article class="card">
-                    <h3>Bem-vindo!</h3>
-                    <p>Login realizado com sucesso. Esta área só aparece para usuário logado.</p>
-                </article>
+        <div class="card">
+            <h3>Técnico em Eletrotécnica</h3>
+            <p><strong>Instituição:</strong> SENAI CFP Djalma Guimarães</p>
 
-                <article class="card">
-                    <h3>Dados Profissionais</h3>
-                    <p>Aqui você pode colocar informações privadas, painel, orçamento ou administração.</p>
-                </article>
-            </div>
-        </section>
+            <img src="TÉCNICO EM ELETROTÉCNICA.jpeg" alt="Técnico em Eletrotécnica" class="miniatura" draggable="false"
+                onclick="abrirImagem(this.src)">
 
-        <section id="contato">
-            <h2>Contato</h2>
-            <div class="contato-lista">
-                <p><strong>Telefone:</strong> (00) 00000-0000</p>
-                <p><strong>E-mail:</strong> contato@email.com</p>
-                <p><strong>Cidade:</strong> Sua cidade</p>
-            </div>
-        </section>
-    </main>
+        </div>
 
-    <footer>
-        <p>&copy; 2026 Cristiano Eletricista. Todos os direitos reservados.</p>
-    </footer>
+        <div class="card">
+            <h3>Técnico em Informática</h3>
+            <p><strong>Instituição:</strong> BIT Araxá - Educação Profissional</p>
 
-    <script src="js/script.js"></script>
+            <img src="" alt="Técnico em Informática" class="miniatura" draggable="false"
+                onclick="abrirImagem(this.src)">,
+
+        </div>
+
+        <div class="card">
+            <h3>Instrumentação Industrial</h3>
+            <p><strong>Instituição:</strong> Udemy</p>
+            <p><strong>Emissão:</strong> Julho de 2025</p>
+
+            <img src="Instrumentação Industrial.png" alt="Instrumentação Industrial" class="miniatura" draggable="false"
+                onclick="abrirImagem(this.src)">,
+
+        </div>
+
+        <div class="card">
+            <h3>O-PAS – O Padrão dos Padrões & Indústria 4.0 e Plataforma Integrada SYSTEM302</h3>
+            <p><strong>Instituição:</strong> CEFET-MG</p>
+            <p><strong>Emissão:</strong> Novembro de 2023</p>
+
+            <img src="O-PAS – O  Padrões & Indústria 4.0 .jpeg" alt="Indústria 4.0 " class="miniatura" draggable="false"
+                onclick="abrirImagem(this.src)">,
+        </div>
+
+        <div class="card">
+            <h3>Comandos Elétricos</h3>
+            <p><strong>Instituição:</strong> Consultoria DLP</p>
+            <p><strong>Emissão:</strong> Março de 2024</p>
+
+            <img src="" alt="Técnico em Informática" class="miniatura" draggable="false"
+                onclick="abrirImagem(this.src)">,
+        </div>
+
+        <div class="card">
+            <h3>CFW500</h3>
+            <p><strong>Capacitação em Inversor de Frequência WEG CFW500</strong></p>
+
+            <img src="CFW500.jpeg" alt="Inversor de Frequência WEG CFW500" class="miniatura" draggable="false"
+                onclick="abrirImagem(this.src)">,
+        </div>
+
+        <div class="card">
+            <h3>Informática + Pacote Office + Power BI</h3>
+            <p><strong>Instituição:</strong> Udemy</p>
+            <p><strong>Emissão:</strong> Março de 2026</p>
+
+            <img src="Curso de Informática + Pacote Microsoft Office + Power BI.jpeg"
+                alt="Informática + Pacote Office + Power BI" class="miniatura" draggable="false"
+                onclick="abrirImagem(this.src)">,
+        </div>
+    </section>
+
+    <section id="habilidades">
+        <h2>Habilidades Técnicas</h2>
+
+        <ul>
+            <li>Manutenção Preventiva</li>
+            <li>Manutenção Corretiva</li>
+            <li>Manutenção Preditiva</li>
+            <li>Painéis Elétricos</li>
+            <li>Motores Elétricos</li>
+            <li>Automação Industrial</li>
+            <li>Leitura de Diagramas Elétricos</li>
+            <li>Informática</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+
+        <p>📱 WhatsApp: (34) 99050-4140</p>
+        <p>📧 Email: cristianojesus13579@gmail.com</p>
+        <p>📍 Araxá - Minas Gerais</p>
+    </section>
+
+    <div id="modalImagem" class="modal" onclick="fecharImagem()">
+        <img id="imagemGrande" class="modal-conteudo">
+    </div>
+
 </body>
+
+<footer>
+    © 2026 - Guia de Aprendizagem em Informática
+</footer>
+
 </html>
