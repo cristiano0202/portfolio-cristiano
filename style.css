@@ -1,216 +1,173 @@
-* {
+margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: #1f2933;
-    background: #f4f7fb;
+    background: #f4f6f9;
+    color: #333;
     line-height: 1.6;
 }
 
-.topo {
-    padding: 48px 20px;
+/* HEADER */
+
+header {
+    background: linear-gradient(135deg, #0d47a1, #1976d2);
+    color: white;
     text-align: center;
-    color: #ffffff;
-    background: linear-gradient(135deg, #0f172a, #2563eb);
+    padding: 40px 20px;
 }
 
 .foto-perfil {
-    width: 150px;
-    height: 150px;
-    border: 4px solid #ffffff;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.25);
+    border: 5px solid white;
+    margin-bottom: 15px;
 }
 
-.topo h1 {
-    margin: 18px 0 6px;
-    font-size: 2.4rem;
+header h1 {
+    font-size: 2.5rem;
 }
 
-.topo p {
-    max-width: 620px;
-    margin: 0 auto;
-    font-size: 1.08rem;
+header p {
+    margin-top: 10px;
+    font-size: 1.1rem;
 }
 
-.menu {
+
+/* MENU */
+
+nav {
+    background: #1565c0;
+    text-align: center;
+    padding: 15px;
     position: sticky;
     top: 0;
-    z-index: 10;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    padding: 12px 16px;
-    background: #111827;
-    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.15);
 }
 
-.menu a,
-.menu button {
-    border: 0;
-    border-radius: 6px;
-    padding: 9px 14px;
-    color: #ffffff;
-    background: transparent;
-    font: inherit;
-    font-weight: 700;
+nav a {
+    color: white;
     text-decoration: none;
-    cursor: pointer;
+    margin: 0 15px;
+    font-weight: bold;
 }
 
-.menu a:hover,
-.menu button:hover {
-    background: #2563eb;
+nav a:hover {
+    color: #ffeb3b;
 }
 
-main {
-    width: min(1080px, calc(100% - 32px));
-    margin: 0 auto;
-}
+/* SEÇÕES */
 
 section {
-    padding: 42px 0;
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
 }
 
 section h2 {
-    margin: 0 0 18px;
-    color: #0f172a;
-    font-size: 1.8rem;
+    color: #0d47a1;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #1976d2;
+    padding-bottom: 8px;
 }
 
-.grade-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 18px;
-}
+/* CARDS */
 
-.card,
-.login-box {
-    border: 1px solid #dbe4f0;
+.card {
+    background: #f8f9fa;
+    padding: 15px;
+    margin-top: 15px;
+    border-left: 5px solid #1976d2;
     border-radius: 8px;
-    padding: 22px;
-    background: #ffffff;
-    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
 }
 
 .card h3 {
-    margin-top: 0;
-    color: #1d4ed8;
+    color: #0d47a1;
+    margin-bottom: 8px;
 }
 
-.login-box {
-    max-width: 460px;
-    margin: 42px auto;
+/* LISTAS */
+
+ul {
+    padding-left: 25px;
 }
 
-.campo {
-    margin-bottom: 16px;
+ul li {
+    margin-bottom: 10px;
 }
 
-.campo label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: 700;
+/* CONTATO */
+
+#contato p {
+    margin-bottom: 10px;
+    font-size: 1.05rem;
 }
 
-.campo input {
-    width: 100%;
-    border: 1px solid #cbd5e1;
-    border-radius: 6px;
-    padding: 12px;
-    font: inherit;
-}
-
-.campo input:focus {
-    outline: 3px solid rgba(37, 99, 235, 0.22);
-    border-color: #2563eb;
-}
-
-.btn {
-    width: 100%;
-    border: 0;
-    border-radius: 6px;
-    padding: 12px 16px;
-    color: #ffffff;
-    background: #2563eb;
-    font: inherit;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background: #1d4ed8;
-}
-
-#mensagemLogin {
-    min-height: 24px;
-    margin: 14px 0 0;
-    font-weight: 700;
-}
-
-#mensagemLogin.sucesso {
-    color: #15803d;
-}
-
-#mensagemLogin.erro {
-    color: #b91c1c;
-}
-
-.usuario-teste {
-    margin: 18px 0 0;
-    padding: 12px;
-    border-radius: 6px;
-    background: #eff6ff;
-    color: #1e3a8a;
-}
-
-.contato-lista {
-    padding: 22px;
-    border-left: 5px solid #2563eb;
-    border-radius: 8px;
-    background: #ffffff;
-}
-
-.contato-lista p {
-    margin: 8px 0;
-}
+/* RODAPÉ */
 
 footer {
-    padding: 22px;
+    background: #0d47a1;
+    color: white;
     text-align: center;
-    color: #ffffff;
-    background: #111827;
+    padding: 15px;
+    margin-top: 30px;
 }
 
-.oculto {
-    display: none !important;
-}
+/* RESPONSIVO */
 
-@media (max-width: 620px) {
-    .topo {
-        padding: 36px 16px;
-    }
+@media (max-width: 768px) {
 
-    .topo h1 {
+    header h1 {
         font-size: 2rem;
     }
 
-    .menu {
-        justify-content: flex-start;
-        overflow-x: auto;
+    nav a {
+        display: block;
+        margin: 10px 0;
     }
 
-    .menu a,
-    .menu button {
-        flex: 0 0 auto;
+    .foto-perfil {
+        width: 140px;
+        height: 140px;
     }
+
+    section {
+        margin: 15px;
+    }
+}
+.miniatura {
+    width: 220px;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 2px solid #ddd;
+}
+
+.miniatura:hover {
+    transform: scale(1.05);
+}
+
+/* Modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-conteudo {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
 }
