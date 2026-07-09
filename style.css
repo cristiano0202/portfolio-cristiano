@@ -1,4 +1,5 @@
-margin: 0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -37,7 +38,6 @@ header p {
     font-size: 1.1rem;
 }
 
-
 /* MENU */
 
 nav {
@@ -46,6 +46,7 @@ nav {
     padding: 15px;
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 
 nav a {
@@ -59,7 +60,7 @@ nav a:hover {
     color: #ffeb3b;
 }
 
-/* SEÇÕES */
+/* SECOES */
 
 section {
     max-width: 1000px;
@@ -67,7 +68,7 @@ section {
     padding: 25px;
     background: white;
     border-radius: 12px;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
@@ -109,7 +110,38 @@ ul li {
     font-size: 1.05rem;
 }
 
-/* RODAPÉ */
+/* IMAGENS E MODAL */
+
+.miniatura {
+    width: 220px;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 2px solid #ddd;
+}
+
+.miniatura:hover {
+    transform: scale(1.05);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-conteudo {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+/* RODAPE */
 
 footer {
     background: #0d47a1;
@@ -122,7 +154,6 @@ footer {
 /* RESPONSIVO */
 
 @media (max-width: 768px) {
-
     header h1 {
         font-size: 2rem;
     }
@@ -140,34 +171,4 @@ footer {
     section {
         margin: 15px;
     }
-}
-.miniatura {
-    width: 220px;
-    height: auto;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-    border: 2px solid #ddd;
-}
-
-.miniatura:hover {
-    transform: scale(1.05);
-}
-
-/* Modal */
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    inset: 0;
-    background: rgba(0,0,0,0.9);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-conteudo {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
 }
