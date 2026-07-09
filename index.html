@@ -3,104 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Cristiano</title>
+    <title>Portfólio Cristiano Eletricista</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <header>
-        <img src="https://via.placeholder.com/180" alt="Foto de perfil" class="foto-perfil">
+    <header class="topo">
+        <img src="https://via.placeholder.com/180" alt="Foto de perfil de Cristiano Eletricista" class="foto-perfil">
         <h1>Cristiano Eletricista</h1>
-        <p>Portfólio profissional e serviços elétricos</p>
+        <p>Portfólio profissional e serviços elétricos residenciais e comerciais.</p>
     </header>
 
-    <nav>
+    <nav class="menu" aria-label="Navegação principal">
         <a href="#sobre">Sobre</a>
         <a href="#servicos">Serviços</a>
         <a href="#projetos">Projetos</a>
         <a href="#contato">Contato</a>
         <a href="#login" id="linkLogin">Login</a>
-        <button id="btnSair" class="oculto">Sair</button>
+        <button type="button" id="btnSair" class="oculto">Sair</button>
     </nav>
 
-    <section id="sobre">
-        <h2>Sobre Mim</h2>
-        <p>Sou profissional da área elétrica, com experiência em instalações, manutenção e projetos residenciais e comerciais.</p>
-    </section>
+    <main>
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <p>Sou profissional da área elétrica, com experiência em instalações, manutenção e projetos residenciais e comerciais.</p>
+        </section>
 
-    <section id="servicos">
-        <h2>Serviços</h2>
+        <section id="servicos">
+            <h2>Serviços</h2>
 
-        <div class="card">
-            <h3>Instalações Elétricas</h3>
-            <p>Execução de instalações elétricas residenciais e comerciais.</p>
-        </div>
+            <div class="grade-cards">
+                <article class="card">
+                    <h3>Instalações Elétricas</h3>
+                    <p>Execução de instalações elétricas residenciais e comerciais com segurança e organização.</p>
+                </article>
 
-        <div class="card">
-            <h3>Manutenção</h3>
-            <p>Correção de falhas, troca de disjuntores, tomadas, interruptores e luminárias.</p>
-        </div>
-    </section>
+                <article class="card">
+                    <h3>Manutenção</h3>
+                    <p>Correção de falhas, troca de disjuntores, tomadas, interruptores e luminárias.</p>
+                </article>
 
-    <section id="projetos">
-        <h2>Projetos</h2>
-
-        <div class="card">
-            <h3>Projeto Residencial</h3>
-            <p>Instalação elétrica completa para residência.</p>
-        </div>
-
-        <div class="card">
-            <h3>Projeto Comercial</h3>
-            <p>Organização de circuitos e pontos elétricos para comércio.</p>
-        </div>
-    </section>
-
-    <section id="login" class="login-box">
-        <h2>Login</h2>
-
-        <form id="formLogin">
-            <div class="campo">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" placeholder="Digite seu e-mail" required>
+                <article class="card">
+                    <h3>Quadros e Circuitos</h3>
+                    <p>Montagem, revisão e identificação de circuitos para facilitar a manutenção.</p>
+                </article>
             </div>
+        </section>
 
-            <div class="campo">
-                <label for="senha">Senha</label>
-                <input type="password" id="senha" placeholder="Digite sua senha" required>
+        <section id="projetos">
+            <h2>Projetos</h2>
+
+            <div class="grade-cards">
+                <article class="card">
+                    <h3>Projeto Residencial</h3>
+                    <p>Instalação elétrica completa para residência, com pontos de iluminação, tomadas e proteção.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Projeto Comercial</h3>
+                    <p>Organização de circuitos e pontos elétricos para comércio, loja ou escritório.</p>
+                </article>
             </div>
+        </section>
 
-            <button type="submit" class="btn">Entrar</button>
+        <section id="login" class="login-box">
+            <h2>Login</h2>
 
-            <p id="mensagemLogin"></p>
-        </form>
+            <form id="formLogin">
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="Digite seu e-mail" autocomplete="email" required>
+                </div>
 
-        <p class="usuario-teste">
-            Usuário teste: <strong>admin@email.com</strong><br>
-            Senha teste: <strong>123456</strong>
-        </p>
-    </section>
+                <div class="campo">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="Digite sua senha" autocomplete="current-password" required>
+                </div>
 
-    <section id="areaRestrita" class="oculto">
-        <h2>Área Restrita</h2>
+                <button type="submit" class="btn">Entrar</button>
 
-        <div class="card">
-            <h3>Bem-vindo!</h3>
-            <p>Login realizado com sucesso. Esta área só aparece para usuário logado.</p>
-        </div>
+                <p id="mensagemLogin" role="status"></p>
+            </form>
 
-        <div class="card">
-            <h3>Dados Profissionais</h3>
-            <p>Aqui você pode colocar informações privadas, painel, orçamento ou administração.</p>
-        </div>
-    </section>
+            <p class="usuario-teste">
+                Usuário teste: <strong>admin@email.com</strong><br>
+                Senha teste: <strong>123456</strong>
+            </p>
+        </section>
 
-    <section id="contato">
-        <h2>Contato</h2>
-        <p><strong>Telefone:</strong> (00) 00000-0000</p>
-        <p><strong>E-mail:</strong> contato@email.com</p>
-        <p><strong>Cidade:</strong> Sua cidade</p>
-    </section>
+        <section id="areaRestrita" class="oculto">
+            <h2>Área Restrita</h2>
+
+            <div class="grade-cards">
+                <article class="card">
+                    <h3>Bem-vindo!</h3>
+                    <p>Login realizado com sucesso. Esta área só aparece para usuário logado.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Dados Profissionais</h3>
+                    <p>Aqui você pode colocar informações privadas, painel, orçamento ou administração.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <div class="contato-lista">
+                <p><strong>Telefone:</strong> (00) 00000-0000</p>
+                <p><strong>E-mail:</strong> contato@email.com</p>
+                <p><strong>Cidade:</strong> Sua cidade</p>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2026 Cristiano Eletricista. Todos os direitos reservados.</p>
