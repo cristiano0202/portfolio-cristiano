@@ -1,56 +1,49 @@
 const formLogin = document.getElementById("formLogin");
-const emailInput = document.getElementById("email");
-const senhaInput = document.getElementById("senha");
+const email = document.getElementById("email");
+const senha = document.getElementById("senha");
 const mensagemLogin = document.getElementById("mensagemLogin");
 const areaRestrita = document.getElementById("areaRestrita");
-const btnSair = document.getElementById("btnSair");
 const linkLogin = document.getElementById("linkLogin");
+const btnSair = document.getElementById("btnSair");
 
-function verificarLogin() {
-    const usuarioLogado = localStorage.getItem("usuarioLogado");
+const usuarioTeste = {
+    email: "admin@email.com",
+    senha: "123456",
+};
 
-    if (usuarioLogado === "true") {
-        areaRestrita.classList.remove("oculto");
-        btnSair.classList.remove("oculto");
-        linkLogin.classList.add("oculto");
-    } else {
-        areaRestrita.classList.add("oculto");
-        btnSair.classList.add("oculto");
-        linkLogin.classList.remove("oculto");
-    }
+function atualizarTelaLogado(logado) {
+    areaRestrita.classList.toggle("oculto", !logado);
+    btnSair.classList.toggle("oculto", !logado);
+    linkLogin.classList.toggle("oculto", logado);
 }
 
-formLogin.addEventListener("submit", function(event) {
-    event.preventDefault();
+function mostrarMensagem(texto, tipo) {
+    mensagemLogin.textContent = texto;
+    mensagemLogin.className = tipo;
+}
 
-    const email = emailInput.value.trim();
-    const senha = senhaInput.value.trim();
+formLogin.addEventListener("submit", function (evento) {
+    evento.preventDefault();
 
-    if (email === "admin@email.com" && senha === "123456") {
-        localStorage.setItem("usuarioLogado", "true");
+    const emailDigitado = email.value.trim();
+    const senhaDigitada = senha.value.trim();
 
-        mensagemLogin.textContent = "Login realizado com sucesso!";
-        mensagemLogin.className = "mensagem-sucesso";
-
-        verificarLogin();
-
-        setTimeout(function() {
-            window.location.href = "#areaRestrita";
-        }, 500);
-    } else {
-        mensagemLogin.textContent = "E-mail ou senha incorretos.";
-        mensagemLogin.className = "mensagem-erro";
+    if (emailDigitado === usuarioTeste.email && senhaDigitada === usuarioTeste.senha) {
+        atualizarTelaLogado(true);
+        mostrarMensagem("Login realizado com sucesso!", "sucesso");
+        formLogin.reset();
+        areaRestrita.scrollIntoView({ behavior: "smooth" });
+        return;
     }
+
+    atualizarTelaLogado(false);
+    mostrarMensagem("E-mail ou senha incorretos.", "erro");
 });
 
-btnSair.addEventListener("click", function() {
-    localStorage.removeItem("usuarioLogado");
-    verificarLogin();
-
-    mensagemLogin.textContent = "Você saiu da conta.";
-    mensagemLogin.className = "mensagem-erro";
-
-    window.location.href = "#login";
+btnSair.addEventListener("click", function () {
+    atualizarTelaLogado(false);
+    mostrarMensagem("Você saiu da área restrita.", "sucesso");
+    document.getElementById("login").scrollIntoView({ behavior: "smooth" });
 });
 
-verificarLogin();
+atualizarTelaLogado(false);
